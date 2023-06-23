@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="1349" it="0" lt="1346" ct="962" ts="1686678911107" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1113" it="0" lt="1110" ct="726" ts="1686678911344" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="284" it="0" lt="284" ct="0" ts="1686678912461" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="285" it="0" lt="285" ct="0" ts="1686678912461" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="1073" it="0" lt="1073" ct="775" ts="1686678911673" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="307" it="0" lt="307" ct="0" ts="1686678912747" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="308" it="0" lt="308" ct="0" ts="1686678912746" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="308" it="0" lt="308" ct="0" ts="1686678912746" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="305" it="0" lt="305" ct="0" ts="1686678913055" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="1" na="1">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="969" it="0" lt="964" ct="670" ts="1686680699222" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1222" it="0" lt="1217" ct="923" ts="1686680698968" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="279" it="0" lt="278" ct="0" ts="1686680700198" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="281" it="0" lt="281" ct="0" ts="1686680700197" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="927" it="0" lt="927" ct="629" ts="1686680699551" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="305" it="0" lt="305" ct="0" ts="1686680700479" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="305" it="0" lt="305" ct="0" ts="1686680700479" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="306" it="0" lt="306" ct="0" ts="1686680700478" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="254" it="0" lt="254" ct="0" ts="1686680700787" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="1" na="1">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="925" it="0" lt="921" ct="611" ts="1686681336225" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1509" it="0" lt="1505" ct="1195" ts="1686681335640" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1256" it="0" lt="1252" ct="942" ts="1686681335894" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="307" it="0" lt="307" ct="0" ts="1686681337154" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="313" it="0" lt="313" ct="0" ts="1686681337154" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="331" it="0" lt="331" ct="0" ts="1686681337154" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="357" it="0" lt="357" ct="0" ts="1686681337468" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="363" it="0" lt="363" ct="0" ts="1686681337462" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="339" it="0" lt="339" ct="0" ts="1686681337486" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="955" it="0" lt="948" ct="676" ts="1686682315707" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1200" it="0" lt="1193" ct="921" ts="1686682315462" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="846" it="0" lt="846" ct="552" ts="1686682316039" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="248" it="0" lt="248" ct="0" ts="1686682316671" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="255" it="0" lt="255" ct="0" ts="1686682316671" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="273" it="0" lt="273" ct="0" ts="1686682316920" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="307" it="0" lt="307" ct="0" ts="1686682316886" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="275" it="0" lt="275" ct="0" ts="1686682316927" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="2" na="2">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="307" it="0" lt="307" ct="0" ts="1686682317194" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="1" na="1">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="1176" it="0" lt="1170" ct="892" ts="1686682610785" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="940" it="0" lt="934" ct="656" ts="1686682611022" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="787" it="0" lt="787" ct="521" ts="1686682611351" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="276" it="0" lt="276" ct="0" ts="1686682611968" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="276" it="0" lt="276" ct="0" ts="1686682611968" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="304" it="0" lt="304" ct="0" ts="1686682612140" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="269" it="0" lt="269" ct="0" ts="1686682612245" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="282" it="0" lt="282" ct="0" ts="1686682612246" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="2" na="2">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="253" it="0" lt="253" ct="0" ts="1686682612445" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="1" na="1">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="1038" it="0" lt="1034" ct="698" ts="1686682713800" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1282" it="0" lt="1278" ct="942" ts="1686682713556" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="385" it="0" lt="385" ct="0" ts="1686682714844" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="1099" it="0" lt="1099" ct="701" ts="1686682714131" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="386" it="0" lt="386" ct="0" ts="1686682714843" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="407" it="0" lt="407" ct="0" ts="1686682715231" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="407" it="0" lt="407" ct="0" ts="1686682715231" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="407" it="0" lt="407" ct="0" ts="1686682715231" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="406" it="0" lt="406" ct="0" ts="1686682715640" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="1" na="1">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="1146" it="0" lt="1143" ct="722" ts="1686682979024" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1405" it="0" lt="1402" ct="981" ts="1686682978765" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="872" it="0" lt="872" ct="585" ts="1686682979356" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="289" it="0" lt="288" ct="0" ts="1686682980176" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="297" it="0" lt="297" ct="0" ts="1686682980177" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="293" it="0" lt="293" ct="0" ts="1686682980229" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="394" it="0" lt="394" ct="0" ts="1686682980465" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="336" it="0" lt="336" ct="0" ts="1686682980523" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="384" it="0" lt="384" ct="0" ts="1686682980475" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="1213" it="0" lt="1210" ct="931" ts="1686683113086" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="966" it="0" lt="963" ct="685" ts="1686683113333" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="289" it="0" lt="289" ct="0" ts="1686683114306" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="931" it="0" lt="930" ct="628" ts="1686683113665" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="289" it="0" lt="289" ct="0" ts="1686683114306" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="304" it="0" lt="304" ct="0" ts="1686683114598" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="305" it="0" lt="305" ct="0" ts="1686683114597" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="305" it="0" lt="305" ct="0" ts="1686683114597" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="267" it="0" lt="267" ct="0" ts="1686683114903" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="1" na="1">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="1170" it="0" lt="1166" ct="881" ts="1686683148158" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="920" it="0" lt="916" ct="631" ts="1686683148408" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="795" it="0" lt="795" ct="535" ts="1686683148742" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="255" it="0" lt="254" ct="0" ts="1686683149333" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="255" it="0" lt="255" ct="0" ts="1686683149333" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="283" it="0" lt="283" ct="0" ts="1686683149538" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="260" it="0" lt="260" ct="0" ts="1686683149589" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="262" it="0" lt="262" ct="0" ts="1686683149588" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="264" it="0" lt="264" ct="0" ts="1686683149823" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="1" na="1">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="1130" it="0" lt="1127" ct="836" ts="1686683385750" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1656" it="0" lt="1653" ct="1362" ts="1686683385223" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1470" it="0" lt="1470" ct="1165" ts="1686683385421" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="297" it="0" lt="297" ct="0" ts="1686683386885" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="297" it="0" lt="297" ct="0" ts="1686683386885" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="292" it="0" lt="292" ct="0" ts="1686683386892" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="314" it="0" lt="314" ct="0" ts="1686683387183" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="315" it="0" lt="315" ct="0" ts="1686683387182" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="313" it="0" lt="313" ct="0" ts="1686683387184" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="1336" it="0" lt="1332" ct="1037" ts="1686683558719" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1071" it="0" lt="1067" ct="772" ts="1686683558983" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="768" it="0" lt="768" ct="513" ts="1686683559306" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="259" it="0" lt="259" ct="0" ts="1686683560058" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="264" it="0" lt="264" ct="0" ts="1686683560058" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="255" it="0" lt="255" ct="0" ts="1686683560075" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="260" it="0" lt="260" ct="0" ts="1686683560319" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="259" it="0" lt="259" ct="0" ts="1686683560323" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="258" it="0" lt="258" ct="0" ts="1686683560332" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="1" na="1">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="1190" it="0" lt="1187" ct="917" ts="1686683692690" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1430" it="0" lt="1427" ct="1157" ts="1686683692451" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="863" it="0" lt="863" ct="585" ts="1686683693022" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="276" it="0" lt="276" ct="0" ts="1686683693884" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="275" it="0" lt="275" ct="0" ts="1686683693885" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="276" it="0" lt="276" ct="0" ts="1686683693884" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="334" it="0" lt="334" ct="0" ts="1686683694161" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="334" it="0" lt="334" ct="0" ts="1686683694161" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="334" it="0" lt="334" ct="0" ts="1686683694161" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="1329" it="0" lt="1327" ct="948" ts="1686683793228" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1829" it="0" lt="1827" ct="1448" ts="1686683792727" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1661" it="0" lt="1659" ct="1280" ts="1686683792896" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="290" it="0" lt="290" ct="0" ts="1686683794564" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="299" it="0" lt="299" ct="0" ts="1686683794563" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="308" it="0" lt="308" ct="0" ts="1686683794563" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="300" it="0" lt="300" ct="0" ts="1686683794856" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="293" it="0" lt="293" ct="0" ts="1686683794863" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="296" it="0" lt="296" ct="0" ts="1686683794872" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="1" na="1">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="1529" it="0" lt="1526" ct="1143" ts="1686683866241" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1284" it="0" lt="1281" ct="898" ts="1686683866486" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="953" it="0" lt="950" ct="599" ts="1686683866817" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="395" it="0" lt="395" ct="0" ts="1686683867774" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="396" it="0" lt="395" ct="0" ts="1686683867774" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="396" it="0" lt="396" ct="0" ts="1686683867774" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="281" it="0" lt="281" ct="0" ts="1686683868171" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="290" it="0" lt="290" ct="0" ts="1686683868170" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="2" na="2">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="289" it="0" lt="289" ct="0" ts="1686683868171" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="2" na="2">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="1016" it="0" lt="1012" ct="726" ts="1686683969164" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1258" it="0" lt="1254" ct="968" ts="1686683968921" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="284" it="0" lt="284" ct="0" ts="1686683970185" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="285" it="0" lt="285" ct="0" ts="1686683970185" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="973" it="0" lt="973" ct="678" ts="1686683969497" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="251" it="0" lt="251" ct="0" ts="1686683970471" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="258" it="0" lt="258" ct="0" ts="1686683970471" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="2" na="2">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="265" it="0" lt="265" ct="0" ts="1686683970471" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="1" na="1">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="261" it="0" lt="261" ct="0" ts="1686683970736" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="1" na="1">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="3052" it="0" lt="3008" ct="2732" ts="1686727013170" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="3209" it="0" lt="3209" ct="2919" ts="1686727013032" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="2778" it="0" lt="2778" ct="2520" ts="1686727013502" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="334" it="0" lt="334" ct="0" ts="1686727016242" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="295" it="0" lt="295" ct="0" ts="1686727016281" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="345" it="0" lt="345" ct="0" ts="1686727016231" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="274" it="0" lt="274" ct="0" ts="1686727016578" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="273" it="0" lt="273" ct="0" ts="1686727016579" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2521" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="332" it="0" lt="332" ct="0" ts="1686727016577" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="1555" it="0" lt="1550" ct="1176" ts="1686728270156" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1736" it="0" lt="1731" ct="1358" ts="1686728269976" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="1222" it="0" lt="1217" ct="843" ts="1686728270489" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="280" it="0" lt="280" ct="0" ts="1686728271717" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="292" it="0" lt="292" ct="0" ts="1686728271717" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="301" it="0" lt="301" ct="0" ts="1686728271717" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="282" it="0" lt="282" ct="0" ts="1686728271998" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="292" it="0" lt="292" ct="0" ts="1686728272010" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="2" na="2">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="296" it="0" lt="296" ct="0" ts="1686728272019" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="1" na="1">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+<httpSample t="2361" it="0" lt="2343" ct="2072" ts="1686818329467" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="258" it="0" lt="257" ct="0" ts="1686818331833" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="2980" it="0" lt="2980" ct="2729" ts="1686818329138" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="3317" it="0" lt="3316" ct="3047" ts="1686818328896" s="true" lb="DashboardPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2521" sby="187" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/dashboard</java.net.URL>
+</httpSample>
+<httpSample t="255" it="0" lt="255" ct="0" ts="1686818332092" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-3" dt="text" by="2504" sby="186" ng="3" na="3">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="256" it="0" lt="255" ct="0" ts="1686818332119" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="187" ng="2" na="2">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="293" it="0" lt="292" ct="0" ts="1686818332216" s="true" lb="HeadlinesPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="187" ng="2" na="2">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/headlines</java.net.URL>
+</httpSample>
+<httpSample t="263" it="0" lt="263" ct="0" ts="1686818332375" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-2" dt="text" by="2504" sby="186" ng="2" na="2">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+<httpSample t="279" it="0" lt="279" ct="0" ts="1686818332509" s="true" lb="TopNewsPage" rc="200" rm="OK" tn="MTNwires 1-1" dt="text" by="2504" sby="186" ng="1" na="1">
+  <java.net.URL>https://preprod-connect.mtnewswires.com/top-news</java.net.URL>
+</httpSample>
+
+</testResults>
