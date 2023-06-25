@@ -592,7 +592,7 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-    &quot;email&quot;: &quot;${Email}&quot;,&#xd;
+    &quot;email&quot;: &quot;${email}&quot;,&#xd;
     &quot;password&quot;: &quot;${Password}&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>

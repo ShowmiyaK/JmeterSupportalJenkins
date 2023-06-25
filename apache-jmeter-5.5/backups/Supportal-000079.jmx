@@ -592,7 +592,7 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
               <elementProp name="" elementType="HTTPArgument">
                 <boolProp name="HTTPArgument.always_encode">false</boolProp>
                 <stringProp name="Argument.value">{&#xd;
-    &quot;email&quot;: &quot;${Email}&quot;,&#xd;
+    &quot;email&quot;: &quot;${email}&quot;,&#xd;
     &quot;password&quot;: &quot;${Password}&quot;&#xd;
 }</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
@@ -985,7 +985,7 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
               <stringProp name="49586">200</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
             <intProp name="Assertion.test_type">8</intProp>
           </ResponseAssertion>

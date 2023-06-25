@@ -118,6 +118,67 @@
             </collectionProp>
           </HeaderManager>
           <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="false">
+            <stringProp name="RegexExtractor.useHeaders">request_headers</stringProp>
+            <stringProp name="RegexExtractor.refname">dynamic_email</stringProp>
+            <stringProp name="RegexExtractor.regex">email</stringProp>
+            <stringProp name="RegexExtractor.template"></stringProp>
+            <stringProp name="RegexExtractor.default"></stringProp>
+            <stringProp name="RegexExtractor.match_number"></stringProp>
+            <stringProp name="Scope.variable">reg_email</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="false">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">import groovy.json.JsonSlurper
+
+// Assuming the dynamic payload is in a JSON request
+
+// Extract the original request payload
+def originalPayload = sampler.getArguments().getArgument(0).getValue()
+
+// Parse the original JSON payload
+def jsonSlurper = new JsonSlurper()
+def jsonPayload = jsonSlurper.parseText(originalPayload)
+
+// Extract the dynamic value (email) from the JSON payload
+def dynamicValue = jsonPayload.email
+
+// Store the dynamic value in a JMeter variable
+vars.put(&quot;dynamicEmail&quot;, dynamicValue)
+
+// Construct the new request with the modified payload
+def newPayload = &quot;&quot;&quot;
+{
+  
+  &quot;firstName&quot;: &quot;mentor&quot;,
+    &quot;lastName&quot;: &quot;mentor new&quot;,
+    &quot;username&quot;: &quot;mentor${__RandomString(2,1234567890,username)}&quot;,
+    &quot;email&quot;: &quot;${dynamicValue}&quot;,
+    &quot;country&quot;: &quot;645e26516072962eef0838b7&quot;,
+    &quot;state&quot;: &quot;645e26516072962eef0838b8&quot;,
+    &quot;profileImgUrl&quot;: &quot;https://test.com&quot;,
+    &quot;dateOfBirth&quot;: &quot;09/03/1995&quot;,
+    &quot;password&quot;: &quot;Test@123&quot;,
+    &quot;gender&quot;: &quot;MALE&quot;,
+    &quot;profileDescription&quot;: &quot;profileDescription profileDescriptionprofileDescriptionprofileDescriptionprofileDescriptionprofileDescriptionprofileDescriptionprofileDescriptionprofileDescriptionprofileDescriptionprofileDescriptionprofileDescription&quot;,
+    &quot;supportAreas&quot;: [
+        &quot;6459feea17c2827614fc0c19&quot;
+    ],
+    &quot;ethnicity&quot;: [&quot;645ccba0f954c3d0a0233fcd&quot;],
+    &quot;religion&quot;: [&quot;645cd25a4eb6e7a4e7cba025&quot;],
+     &quot;role&quot;: &quot;MENTOR&quot;
+}
+&quot;&quot;&quot;
+
+// Update the request payload with the new payload
+sampler.getArguments().getArgument(0).setValue(newPayload)
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
           <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="true">
             <stringProp name="scriptLanguage">groovy</stringProp>
             <stringProp name="parameters"></stringProp>
@@ -149,15 +210,38 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
             <stringProp name="Sample.scope">variable</stringProp>
           </JSONPostProcessor>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="1917918568">User has been successfully created</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">2</intProp>
-          </ResponseAssertion>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="false">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">
+import groovy.json.JsonSlurper
+
+// Assuming the dynamic payload is in a JSON request
+
+// Extract the original request payload
+def originalPayload = sampler.getArguments().getArgument(0).getValue()
+
+// Parse the original JSON payload
+def jsonSlurper = new JsonSlurper()
+def jsonPayload = jsonSlurper.parseText(originalPayload)
+
+// Extract the dynamic value (email) from the JSON payload
+def dynamicValue = jsonPayload.email
+
+// Store the dynamic value in a JMeter variable
+vars.put(&quot;dynamicValue&quot;, dynamicValue)
+
+// Construct the new request payload with the modified value
+def newPayload = &quot;&quot;&quot;
+{
+  &quot;email&quot;: &quot;${dynamicValue}&quot;,
+  &quot;password&quot;: &quot;Test@123&quot;
+}
+&quot;&quot;&quot;
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
           <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mentor_Login" enabled="true">
@@ -219,17 +303,91 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
             <stringProp name="JSONPostProcessor.jsonPathExprs">token</stringProp>
             <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
             <stringProp name="Scope.variable"></stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
           </JSONPostProcessor>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49586">200</stringProp>
+          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="false">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">
+// Update the request payload with the new payload
+sampler.getArguments().getArgument(0).setValue(newPayload)</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PreProcessor>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="false">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">
+
+// Update the request payload with the new payload
+sampler.getArguments().getArgument(0).setValue(newPayload)
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mentor_Delete" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">[&#xd;
+    {&#xd;
+        &quot;startTime&quot;: &quot;2023-07-20T03:00:00.000+00:00&quot;,&#xd;
+        &quot;endTime&quot;: &quot;2023-07-20T03:45:00.000+00:00&quot;&#xd;
+    }&#xd;
+]</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
             </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">16</intProp>
-          </ResponseAssertion>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">52.87.86.34</stringProp>
+          <stringProp name="HTTPSampler.port">3000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/api/mentor/delete-schedule</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Authorization" elementType="Header">
+                <stringProp name="Header.name">Authorization</stringProp>
+                <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InJlc2V0TGluayI6ImV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUpmYVdRaU9pSTJORFkzWVRReFpXRXpNVGt5WWpaa09EbGhZbVU0WVRraUxDSnBZWFFpT2pFMk9EVTVOekV3TkRFc0ltVjRjQ0k2TVRZNE5UazNNVGswTVgwLlU4R0xzcTJXVDE3ZERVZ09wclhXNUpqNFdtTDhNeEtqdHdnRXZnWEl3QWciLCJfaWQiOiI2NDY3YTQxZWEzMTkyYjZkODlhYmU4YTkiLCJmaXJzdE5hbWUiOiJTdWppIiwibGFzdE5hbWUiOiJwcml5YSIsInVzZXJuYW1lIjoic3VqaXByaXlhIFIiLCJlbWFpbCI6InN1amlAeW9wbWFpbC5jb20iLCJjb3VudHJ5IjoiNjQ1ZTI2NTE2MDcyOTYyZWVmMDgzZDdkIiwic3RhdGUiOiI2NDVlMjY1MTYwNzI5NjJlZWYwODNkODYiLCJwcm9maWxlSW1nVXJsIjoiaHR0cHM6Ly9kMjlwNXQzYjBmM3ludy5jbG91ZGZyb250Lm5ldC9wcm9maWxlLzkxN2NmMDZiLWVjZjQtNDRlNC1iZjg0LTQzZGM5NmIwN2NiNC9kb3dubG9hZC5qcGciLCJkYXRlT2ZCaXJ0aCI6IjE5OTUtMDctMDVUMDA6MDA6MDAuMDAwWiIsImdlbmRlciI6Ik1BTEUiLCJzdXBwb3J0QXJlYXMiOlsiNjQ2NWE2MzcwZDQ4ZmI4NTBlN2NiOWRlIl0sInByb2ZpbGVEZXNjcmlwdGlvbiI6IkxvcmVtIElwc3VtIGlzIHNpbXBseSBkdW1teSB0ZXh0IG9mIHRoZSBwcmludGluZyBhbmQgdHlwZXNldHRpbmcgaW5kdXN0cnkuIExvcmVtIElwc3VtIGhhcyBiZWVuIHRoZSBpbmR1c3RyeSdzIHN0YW5kYXJkIGR1bW15IHRleHQgZXZlciBzaW5jZSB0aGUgMTUwMHMsIHdoZW4gYW4gdW5rbm93biBwcmludGVyIHRvb2sgYSBnYWxsZXkgb2YgdHlwZSBhbmQgc2NyYW1ibGVkIGl0IHRvIG1ha2UgYSB0eXBlIHNwZWNpbWVuIGJvb2suIEl0IGhhcyBzdXJ2aXZlZCBub3Qgb25seSBmaXZlIGNlbnR1cmllcywgYnV0IGFsc28gdGhlIGxlYXAgaW50byBlbGVjdHJvbmljIHR5cGVzZXR0aW5nLCByZW1haW5pbmcgZXNzZW50aWFsbHkgdW5jaGFuZ2VkLiBJdCB3YXMgcG9wdWxhcmlzZWQgaW4gdGhlIDE5NjBzIHdpdGggdGhlIHJlbGVhc2Ugb2YgTGV0cmFzZXQgc2hlZXRzIGNvbnRhaW5pbmcgTG9yZW0gSXBzdW0gcGFzc2FnZXMsIGFuZCBtb3JlIHJlY2VudGx5IHdpdGggZGVza3RvcCBwdWJsaXNoaW5nIHNvZnR3YXJlIGxpa2UgQWxkdXMgUGFnZU1ha2VyIGluY2x1ZGluZyB2ZXJzaW9ucyBvZiBMb3JlbSBJcHN1bS4iLCJldGhuaWNpdHkiOltdLCJyZWxpZ2lvbiI6W10sInJvbGUiOiJNRU5UT1IiLCJzZXNzaW9uUHJlZmVyZW5jZSI6IjY0NjVhOTI1MGQ0OGZiODUwZTdjYmEwNCIsImNyZWF0ZWRBdCI6IjIwMjMtMDUtMTlUMTY6MzA6MjIuNjgzWiIsInVwZGF0ZWRBdCI6IjIwMjMtMDYtMTRUMDg6Mzc6MjcuNzUwWiIsIl9fdiI6MCwiaXNFeGlzdGluZyI6ZmFsc2V9LCJpYXQiOjE2ODY3MzU2NTgsImV4cCI6MTcxNjczNTY1OH0.fJrTWy29xRjFOU9lU-Zk2bq3-0SGVHlsARGTiuu5Vu8</stringProp>
+              </elementProp>
+              <elementProp name="Postman-Token" elementType="Header">
+                <stringProp name="Header.name">Postman-Token</stringProp>
+                <stringProp name="Header.value">66db4312-7884-4ce1-ad24-b2d1cbc7bcdc</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">PostmanRuntime/7.32.3</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
           <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mentor_Create" enabled="true">
@@ -296,67 +454,6 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mentor_Delete" enabled="true">
-          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">[&#xd;
-    {&#xd;
-        &quot;startTime&quot;: &quot;2023-07-20T03:00:00.000+00:00&quot;,&#xd;
-        &quot;endTime&quot;: &quot;2023-07-20T03:45:00.000+00:00&quot;&#xd;
-    }&#xd;
-]</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain">52.87.86.34</stringProp>
-          <stringProp name="HTTPSampler.port">3000</stringProp>
-          <stringProp name="HTTPSampler.protocol">http</stringProp>
-          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
-          <stringProp name="HTTPSampler.path">/api/mentor/delete-schedule</stringProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-            <collectionProp name="HeaderManager.headers">
-              <elementProp name="Authorization" elementType="Header">
-                <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">${ment_token}</stringProp>
-              </elementProp>
-              <elementProp name="Postman-Token" elementType="Header">
-                <stringProp name="Header.name">Postman-Token</stringProp>
-                <stringProp name="Header.value">66db4312-7884-4ce1-ad24-b2d1cbc7bcdc</stringProp>
-              </elementProp>
-              <elementProp name="Content-Type" elementType="Header">
-                <stringProp name="Header.name">Content-Type</stringProp>
-                <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-              <elementProp name="Accept-Encoding" elementType="Header">
-                <stringProp name="Header.name">Accept-Encoding</stringProp>
-                <stringProp name="Header.value">gzip, deflate, br</stringProp>
-              </elementProp>
-              <elementProp name="User-Agent" elementType="Header">
-                <stringProp name="Header.name">User-Agent</stringProp>
-                <stringProp name="Header.value">PostmanRuntime/7.32.3</stringProp>
-              </elementProp>
-              <elementProp name="Accept" elementType="Header">
-                <stringProp name="Header.name">Accept</stringProp>
-                <stringProp name="Header.value">*/*</stringProp>
-              </elementProp>
-            </collectionProp>
-          </HeaderManager>
-          <hashTree/>
-        </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mentor_Upcoming Session" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -389,7 +486,7 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
             <collectionProp name="HeaderManager.headers">
               <elementProp name="Authorization" elementType="Header">
                 <stringProp name="Header.name">Authorization</stringProp>
-                <stringProp name="Header.value">${ment_token}</stringProp>
+                <stringProp name="Header.value">Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InJlc2V0TGluayI6ImV5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUpmYVdRaU9pSTJORFkzWVRReFpXRXpNVGt5WWpaa09EbGhZbVU0WVRraUxDSnBZWFFpT2pFMk9EVTVOekV3TkRFc0ltVjRjQ0k2TVRZNE5UazNNVGswTVgwLlU4R0xzcTJXVDE3ZERVZ09wclhXNUpqNFdtTDhNeEtqdHdnRXZnWEl3QWciLCJfaWQiOiI2NDY3YTQxZWEzMTkyYjZkODlhYmU4YTkiLCJmaXJzdE5hbWUiOiJTdWppIiwibGFzdE5hbWUiOiJwcml5YSIsInVzZXJuYW1lIjoic3VqaXByaXlhIFIiLCJlbWFpbCI6InN1amlAeW9wbWFpbC5jb20iLCJjb3VudHJ5IjoiNjQ1ZTI2NTE2MDcyOTYyZWVmMDgzZDdkIiwic3RhdGUiOiI2NDVlMjY1MTYwNzI5NjJlZWYwODNkODYiLCJwcm9maWxlSW1nVXJsIjoiaHR0cHM6Ly9kMjlwNXQzYjBmM3ludy5jbG91ZGZyb250Lm5ldC9wcm9maWxlLzkxN2NmMDZiLWVjZjQtNDRlNC1iZjg0LTQzZGM5NmIwN2NiNC9kb3dubG9hZC5qcGciLCJkYXRlT2ZCaXJ0aCI6IjE5OTUtMDctMDVUMDA6MDA6MDAuMDAwWiIsImdlbmRlciI6Ik1BTEUiLCJzdXBwb3J0QXJlYXMiOlsiNjQ2NWE2MzcwZDQ4ZmI4NTBlN2NiOWRlIl0sInByb2ZpbGVEZXNjcmlwdGlvbiI6IkxvcmVtIElwc3VtIGlzIHNpbXBseSBkdW1teSB0ZXh0IG9mIHRoZSBwcmludGluZyBhbmQgdHlwZXNldHRpbmcgaW5kdXN0cnkuIExvcmVtIElwc3VtIGhhcyBiZWVuIHRoZSBpbmR1c3RyeSdzIHN0YW5kYXJkIGR1bW15IHRleHQgZXZlciBzaW5jZSB0aGUgMTUwMHMsIHdoZW4gYW4gdW5rbm93biBwcmludGVyIHRvb2sgYSBnYWxsZXkgb2YgdHlwZSBhbmQgc2NyYW1ibGVkIGl0IHRvIG1ha2UgYSB0eXBlIHNwZWNpbWVuIGJvb2suIEl0IGhhcyBzdXJ2aXZlZCBub3Qgb25seSBmaXZlIGNlbnR1cmllcywgYnV0IGFsc28gdGhlIGxlYXAgaW50byBlbGVjdHJvbmljIHR5cGVzZXR0aW5nLCByZW1haW5pbmcgZXNzZW50aWFsbHkgdW5jaGFuZ2VkLiBJdCB3YXMgcG9wdWxhcmlzZWQgaW4gdGhlIDE5NjBzIHdpdGggdGhlIHJlbGVhc2Ugb2YgTGV0cmFzZXQgc2hlZXRzIGNvbnRhaW5pbmcgTG9yZW0gSXBzdW0gcGFzc2FnZXMsIGFuZCBtb3JlIHJlY2VudGx5IHdpdGggZGVza3RvcCBwdWJsaXNoaW5nIHNvZnR3YXJlIGxpa2UgQWxkdXMgUGFnZU1ha2VyIGluY2x1ZGluZyB2ZXJzaW9ucyBvZiBMb3JlbSBJcHN1bS4iLCJldGhuaWNpdHkiOltdLCJyZWxpZ2lvbiI6W10sInJvbGUiOiJNRU5UT1IiLCJzZXNzaW9uUHJlZmVyZW5jZSI6IjY0NjVhOTI1MGQ0OGZiODUwZTdjYmEwNCIsImNyZWF0ZWRBdCI6IjIwMjMtMDUtMTlUMTY6MzA6MjIuNjgzWiIsInVwZGF0ZWRBdCI6IjIwMjMtMDYtMTRUMDg6Mzc6MjcuNzUwWiIsIl9fdiI6MCwiaXNFeGlzdGluZyI6ZmFsc2V9LCJpYXQiOjE2ODY3NDAwNDYsImV4cCI6MTcxNjc0MDA0Nn0.H9APTwzNX6pznFoCUa33bF3MxzLOSkAnoCXfjm1iK6s</stringProp>
               </elementProp>
               <elementProp name="timezone" elementType="Header">
                 <stringProp name="Header.name">timezone</stringProp>
@@ -456,10 +553,6 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
           <stringProp name="filename"></stringProp>
         </ResultCollector>
         <hashTree/>
-        <SwitchController guiclass="SwitchControllerGui" testclass="SwitchController" testname="Switch Controller" enabled="true">
-          <stringProp name="SwitchController.value">1</stringProp>
-        </SwitchController>
-        <hashTree/>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Patient" enabled="true">
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -475,116 +568,6 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Patient Registration" enabled="true">
-          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="" elementType="HTTPArgument">
-                <boolProp name="HTTPArgument.always_encode">false</boolProp>
-                <stringProp name="Argument.value">{&#xd;
-    &quot;firstName&quot;: &quot;patientx&quot;,&#xd;
-    &quot;lastName&quot;: &quot;patientx&quot;,&#xd;
-    &quot;username&quot;: &quot;Patient${__RandomString(3,1234567890,username)}&quot;,&#xd;
-    &quot;email&quot;: &quot;patient1${__RandomString(2,1234567890,username)}@yopmail.com&quot;,&#xd;
-    &quot;country&quot;: &quot;645e26516072962eef0838b7&quot;,&#xd;
-    &quot;state&quot;: &quot;645e26516072962eef0838b8&quot;,&#xd;
-    &quot;dateOfBirth&quot;: &quot;09/03/1958&quot;,&#xd;
-    &quot;password&quot;: &quot;Test@123&quot;,&#xd;
-    &quot;gender&quot;: &quot;MALE&quot;,&#xd;
-    &quot;supportAreas&quot;: [&#xd;
-        &quot;6459feea17c2827614fc0c19&quot;&#xd;
-    ],&#xd;
-    &quot;sessionPreference&quot;: &quot;645cc954f954c3d0a0233fc4&quot;,&#xd;
-    &quot;mentorPreference&quot;: {&#xd;
-        &quot;ageRange&quot;: &quot;645ccb46f954c3d0a0233fcb&quot;,&#xd;
-        &quot;gender&quot;: &quot;MALE&quot;,&#xd;
-        &quot;ethnicity&quot;: [&#xd;
-            &quot;645ccba0f954c3d0a0233fcd&quot;&#xd;
-        ],&#xd;
-        &quot;religion&quot;: [&#xd;
-            &quot;645cd25a4eb6e7a4e7cba025&quot;&#xd;
-        ],&#xd;
-        &quot;country&quot;: &quot;645e26516072962eef0838b7&quot;,&#xd;
-    &quot;state&quot;: &quot;645e26516072962eef0838b8&quot;&#xd;
-    },&#xd;
-    &quot;role&quot;: &quot;PATIENT&quot;&#xd;
-}</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-          <stringProp name="HTTPSampler.domain">52.87.86.34</stringProp>
-          <stringProp name="HTTPSampler.port">3000</stringProp>
-          <stringProp name="HTTPSampler.protocol">http</stringProp>
-          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
-          <stringProp name="HTTPSampler.path">/api/auth/register</stringProp>
-          <stringProp name="HTTPSampler.method">POST</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
-          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
-          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
-          <stringProp name="HTTPSampler.response_timeout"></stringProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-            <collectionProp name="HeaderManager.headers">
-              <elementProp name="Postman-Token" elementType="Header">
-                <stringProp name="Header.name">Postman-Token</stringProp>
-                <stringProp name="Header.value">fa1085b4-6e98-459b-af75-e8311253f6fa</stringProp>
-              </elementProp>
-              <elementProp name="Content-Type" elementType="Header">
-                <stringProp name="Header.name">Content-Type</stringProp>
-                <stringProp name="Header.value">application/json</stringProp>
-              </elementProp>
-              <elementProp name="Accept-Encoding" elementType="Header">
-                <stringProp name="Header.name">Accept-Encoding</stringProp>
-                <stringProp name="Header.value">gzip, deflate, br</stringProp>
-              </elementProp>
-              <elementProp name="User-Agent" elementType="Header">
-                <stringProp name="Header.name">User-Agent</stringProp>
-                <stringProp name="Header.value">PostmanRuntime/7.32.3</stringProp>
-              </elementProp>
-              <elementProp name="Accept" elementType="Header">
-                <stringProp name="Header.name">Accept</stringProp>
-                <stringProp name="Header.value">*/*</stringProp>
-              </elementProp>
-            </collectionProp>
-          </HeaderManager>
-          <hashTree/>
-          <JSR223PreProcessor guiclass="TestBeanGUI" testclass="JSR223PreProcessor" testname="JSR223 PreProcessor" enabled="false">
-            <stringProp name="scriptLanguage">groovy</stringProp>
-            <stringProp name="parameters"></stringProp>
-            <stringProp name="filename"></stringProp>
-            <stringProp name="cacheKey">true</stringProp>
-            <stringProp name="script">import groovy.json.JsonSlurper
-
-// Extract the original request payload
-def originalPayload = sampler.getArguments().getArgument(0).getValue()
-
-// Parse the original JSON payload
-def jsonSlurper = new JsonSlurper()
-def jsonPayload = jsonSlurper.parseText(originalPayload)
-
-// Extract the email value from the JSON payload
-def emailValue = jsonPayload.email
-
-// Store the email value in a JMeter variable
-vars.put(&quot;dynamicValue&quot;, emailValue)
-
-</stringProp>
-          </JSR223PreProcessor>
-          <hashTree/>
-          <JSONPostProcessor guiclass="JSONPostProcessorGui" testclass="JSONPostProcessor" testname="JSON Extractor" enabled="true">
-            <stringProp name="JSONPostProcessor.referenceNames">dynamicEmail</stringProp>
-            <stringProp name="JSONPostProcessor.jsonPathExprs">$.email </stringProp>
-            <stringProp name="JSONPostProcessor.match_numbers"></stringProp>
-            <stringProp name="Scope.variable">dynamicValue</stringProp>
-            <stringProp name="Sample.scope">variable</stringProp>
-          </JSONPostProcessor>
-          <hashTree/>
-        </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Login" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -652,10 +635,8 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
           </CSVDataSet>
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49586">200</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
+            <collectionProp name="Asserion.test_strings"/>
+            <stringProp name="Assertion.custom_message">200</stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
             <intProp name="Assertion.test_type">8</intProp>
@@ -786,10 +767,8 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
           </HeaderManager>
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49586">200</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
+            <collectionProp name="Asserion.test_strings"/>
+            <stringProp name="Assertion.custom_message">200</stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
             <intProp name="Assertion.test_type">8</intProp>
@@ -858,11 +837,9 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
           </HeaderManager>
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49586">200</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <collectionProp name="Asserion.test_strings"/>
+            <stringProp name="Assertion.custom_message">200</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
             <intProp name="Assertion.test_type">8</intProp>
           </ResponseAssertion>
@@ -925,16 +902,6 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
             </collectionProp>
           </HeaderManager>
           <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49586">200</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">8</intProp>
-          </ResponseAssertion>
-          <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Upcoming-session" enabled="true">
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
@@ -979,16 +946,6 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
               </elementProp>
             </collectionProp>
           </HeaderManager>
-          <hashTree/>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49586">200</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">8</intProp>
-          </ResponseAssertion>
           <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="cancel-booking" enabled="true">
@@ -1062,6 +1019,85 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
           </JSONPathAssertion>
           <hashTree/>
         </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="/api/auth/register-2" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;firstName&quot;: &quot;patientx&quot;,&#xd;
+    &quot;lastName&quot;: &quot;patientx&quot;,&#xd;
+    &quot;username&quot;: &quot;patient demo&quot;,&#xd;
+    &quot;email&quot;: &quot;patient123@yopmail.com&quot;,&#xd;
+    &quot;country&quot;: &quot;645e26516072962eef0838b7&quot;,&#xd;
+    &quot;state&quot;: &quot;645e26516072962eef0838b8&quot;,&#xd;
+    &quot;dateOfBirth&quot;: &quot;09/03/1958&quot;,&#xd;
+    &quot;password&quot;: &quot;Test@123&quot;,&#xd;
+    &quot;gender&quot;: &quot;MALE&quot;,&#xd;
+    &quot;supportAreas&quot;: [&#xd;
+        &quot;6459feea17c2827614fc0c19&quot;&#xd;
+    ],&#xd;
+    &quot;sessionPreference&quot;: &quot;645cc954f954c3d0a0233fc4&quot;,&#xd;
+    &quot;mentorPreference&quot;: {&#xd;
+        &quot;ageRange&quot;: &quot;645ccb46f954c3d0a0233fcb&quot;,&#xd;
+        &quot;gender&quot;: &quot;MALE&quot;,&#xd;
+        &quot;ethnicity&quot;: [&#xd;
+            &quot;645ccba0f954c3d0a0233fcd&quot;&#xd;
+        ],&#xd;
+        &quot;religion&quot;: [&#xd;
+            &quot;645cd25a4eb6e7a4e7cba025&quot;&#xd;
+        ],&#xd;
+        &quot;country&quot;: &quot;645e26516072962eef0838b7&quot;,&#xd;
+    &quot;state&quot;: &quot;645e26516072962eef0838b8&quot;&#xd;
+    },&#xd;
+    &quot;role&quot;: &quot;PATIENT&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">52.87.86.34</stringProp>
+          <stringProp name="HTTPSampler.port">3000</stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+          <stringProp name="HTTPSampler.path">/api/auth/register</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="Postman-Token" elementType="Header">
+                <stringProp name="Header.name">Postman-Token</stringProp>
+                <stringProp name="Header.value">fa1085b4-6e98-459b-af75-e8311253f6fa</stringProp>
+              </elementProp>
+              <elementProp name="Content-Type" elementType="Header">
+                <stringProp name="Header.name">Content-Type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="Accept-Encoding" elementType="Header">
+                <stringProp name="Header.name">Accept-Encoding</stringProp>
+                <stringProp name="Header.value">gzip, deflate, br</stringProp>
+              </elementProp>
+              <elementProp name="User-Agent" elementType="Header">
+                <stringProp name="Header.name">User-Agent</stringProp>
+                <stringProp name="Header.value">PostmanRuntime/7.32.3</stringProp>
+              </elementProp>
+              <elementProp name="Accept" elementType="Header">
+                <stringProp name="Header.name">Accept</stringProp>
+                <stringProp name="Header.value">*/*</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
         <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
@@ -1098,10 +1134,6 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
           </objProp>
           <stringProp name="filename"></stringProp>
         </ResultCollector>
-        <hashTree/>
-        <SwitchController guiclass="SwitchControllerGui" testclass="SwitchController" testname="Switch Controller" enabled="true">
-          <stringProp name="SwitchController.value">2</stringProp>
-        </SwitchController>
         <hashTree/>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Admin" enabled="true">
