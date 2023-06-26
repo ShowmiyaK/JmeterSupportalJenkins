@@ -12,6 +12,8 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
+      <TestFragmentController guiclass="TestFragmentControllerGui" testclass="TestFragmentController" testname="Test Fragment" enabled="false"/>
+      <hashTree/>
       <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="HTTP(S) Test Script Recorder" enabled="true">
         <stringProp name="ProxyControlGui.port">8888</stringProp>
         <collectionProp name="ProxyControlGui.exclude_list"/>
@@ -158,21 +160,6 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
             <boolProp name="Assertion.assume_success">false</boolProp>
             <intProp name="Assertion.test_type">2</intProp>
           </ResponseAssertion>
-          <hashTree/>
-          <JSR223Timer guiclass="TestBeanGUI" testclass="JSR223Timer" testname="JSR223 Timer" enabled="true">
-            <stringProp name="cacheKey">true</stringProp>
-            <stringProp name="filename"></stringProp>
-            <stringProp name="parameters"></stringProp>
-            <stringProp name="script">import java.util.concurrent.TimeUnit
-
-// Set the desired delay duration in milliseconds
-def delayInMillis = 5000
-
-// Introduce the delay
-TimeUnit.MILLISECONDS.sleep(delayInMillis)
-</stringProp>
-            <stringProp name="scriptLanguage">groovy</stringProp>
-          </JSR223Timer>
           <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Mentor_Login" enabled="true">
@@ -603,11 +590,6 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
             <stringProp name="Sample.scope">variable</stringProp>
           </JSONPostProcessor>
           <hashTree/>
-          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Uniform Random Timer" enabled="true">
-            <stringProp name="ConstantTimer.delay">0</stringProp>
-            <stringProp name="RandomTimer.range">100.0</stringProp>
-          </UniformRandomTimer>
-          <hashTree/>
         </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Patient Login" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
@@ -1017,6 +999,15 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
           <stringProp name="IncludeController.includepath">C:\Users\showmiya.k\Admin Login.jmx</stringProp>
         </IncludeController>
         <hashTree/>
+        <ModuleController guiclass="ModuleControllerGui" testclass="ModuleController" testname="Module Controller" enabled="false">
+          <collectionProp name="ModuleController.node_path">
+            <stringProp name="764597751">Test Plan</stringProp>
+            <stringProp name="1984164890">Supportal</stringProp>
+            <stringProp name="63116079">Admin</stringProp>
+            <stringProp name="-2103900588">Include Controller</stringProp>
+          </collectionProp>
+        </ModuleController>
+        <hashTree/>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Admin Login" enabled="true">
           <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
@@ -1350,10 +1341,6 @@ vars.put(&quot;dynamicValue&quot;, emailValue)
           </HeaderManager>
           <hashTree/>
         </hashTree>
-        <IncludeController guiclass="IncludeControllerGui" testclass="IncludeController" testname="Include Controller" enabled="true">
-          <stringProp name="IncludeController.includepath">C:\Users\showmiya.k\Admin Login.jmx</stringProp>
-        </IncludeController>
-        <hashTree/>
       </hashTree>
       <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>

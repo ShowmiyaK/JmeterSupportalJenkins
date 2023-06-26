@@ -1,0 +1,8 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1687723383103,864,Login,200,OK,Patient 1-1,text,true,,3173,342,1,1,http://52.87.86.34:3000/api/auth/login,864,0,275
+1687723383969,318,view-profile,200,OK,Patient 1-1,text,true,,1493,1953,1,1,http://52.87.86.34:3000/api/mentor/view-profile,318,0,0
+1687723384287,325,Find-mentor,200,OK,Patient 1-1,text,true,,4129,2407,1,1,http://52.87.86.34:3000/api/mentor/find-mentor?pageNo=1&pageSize=2,325,0,0
+1687723384612,2796,create-booking,200,OK,Patient 1-1,text,true,,3861,2084,1,1,http://52.87.86.34:3000/api/booking/create-booking,2796,0,0
+1687723387408,330,view-mentor-profile,200,OK,Patient 1-1,text,true,,1533,2059,1,1,http://52.87.86.34:3000/api/mentor/view-mentor-profile,330,0,0
+1687723387738,313,Upcoming-session,200,OK,Patient 1-1,text,true,,2419,1958,1,1,http://52.87.86.34:3000/api/patient/upcoming-session,313,0,0
+1687723388051,1101,cancel-booking,200,OK,Patient 1-1,text,true,,654,2084,1,1,http://52.87.86.34:3000/api/booking/cancel-booking,1101,0,0
